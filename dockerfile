@@ -1,4 +1,4 @@
-FROM rabbitmq:management
+FROM rabbitmq:latest
 
 MAINTAINER Bipindra Shrestha "bipindra.shrestha@gmail.com"
 
