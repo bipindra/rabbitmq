@@ -1,5 +1,5 @@
 FROM rabbitmq:latest
-
+ 
 MAINTAINER Bipindra Shrestha "bipindra.shrestha@gmail.com"
 
 RUN rabbitmq-plugins enable --offline rabbitmq_management rabbitmq_auth_backend_ldap
