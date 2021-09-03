@@ -22,10 +22,12 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
-      displayName: Build an image
+      displayName: Docker Build
       inputs:
-        command: build
-        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        containerRegistry: 'dockerhub'
+        repository: 'bipins/$(app_name)'
+        command: 'build'
+        Dockerfile: '**/Dockerfile'
         tags: '$(Build.BuildNumber),latest'
     - task: Docker@2
       displayName: Docker Login
