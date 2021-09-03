@@ -39,4 +39,4 @@ stages:
         containerRegistry: 'dockerhub'
         repository: 'bipins/$(app_name)'
         command: 'push'
-        tags: $tag
+        tags: '$(Build.BuildNumber)'
